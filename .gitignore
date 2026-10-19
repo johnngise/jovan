@@ -1,0 +1,4 @@
+node_modules/
+.next/
+/vendor/
+/config/contact-mail.local.php

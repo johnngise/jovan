@@ -1,0 +1,6 @@
+@import "../../frontend/node_modules/tailwindcss/theme.css" prefix(tw);
+@import "../../frontend/node_modules/tailwindcss/utilities.css" prefix(tw);
+
+@source "../../*.php";
+@source "../../includes/**/*.php";
+@source "../../admin/**/*.php";

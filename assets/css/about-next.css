@@ -1,0 +1,407 @@
+body.about-next-page {
+  background: #f7fbfb;
+  color: #163b4d;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.about-next-page .navbar.navbar-expand-lg {
+  background: rgba(255,255,255,.97) !important;
+  border-bottom: 1px solid #d4e6e9;
+  box-shadow: 0 3px 18px rgba(22,78,104,.08);
+  padding: 12px 0;
+}
+
+.about-next-page .navbar.navbar-expand-lg .navbar-brand {
+  align-items: center;
+  color: #164e68 !important;
+  display: flex;
+  font-size: 21px;
+  font-weight: 700;
+}
+
+.about-next-page .navbar.navbar-expand-lg .navbar-brand img {
+  border-radius: 6px;
+  height: 48px;
+  margin-right: 10px;
+  object-fit: contain;
+  width: 48px;
+}
+
+.about-next-page .navbar.navbar-expand-lg .navbar-brand span {
+  color: #4da9c2;
+}
+
+.about-next-page .navbar.navbar-expand-lg .nav-link {
+  color: #164e68 !important;
+  font-size: 13px;
+  font-weight: 500;
+  margin: 0 8px;
+}
+
+.about-next-page .navbar.navbar-expand-lg .nav-link:hover,
+.about-next-page .navbar.navbar-expand-lg .nav-link.active {
+  color: #bd6846 !important;
+}
+
+.about-next-page .navbar.navbar-expand-lg .navbar-toggler {
+  border: 0;
+  box-shadow: none;
+  padding: 8px;
+}
+
+.about-next-page .page-header {
+  background:
+    radial-gradient(circle at 88% 18%, rgba(255,255,255,.10) 0 1px, transparent 1px 18px),
+    linear-gradient(120deg,rgba(22,78,104,.97),rgba(77,169,194,.88)),
+    url("../img/orpais.jpeg") center/cover no-repeat;
+  isolation: isolate;
+  margin-top: 0;
+  overflow: hidden;
+  padding: 150px 0 78px;
+  position: relative;
+}
+
+.about-next-page .page-header::after {
+  border: 1px solid rgba(255,255,255,.16);
+  border-radius: 50%;
+  box-shadow: 0 0 0 55px rgba(255,255,255,.035), 0 0 0 115px rgba(255,255,255,.025);
+  content: "";
+  height: 390px;
+  position: absolute;
+  right: -75px;
+  top: 45px;
+  width: 390px;
+  z-index: -1;
+}
+
+.about-next-page .page-header .container {
+  position: relative;
+  z-index: 1;
+}
+
+.about-next-page .page-header h1 {
+  color: #fff;
+  font: 400 clamp(42px,6vw,68px)/1.06 Georgia,serif;
+  letter-spacing: -.035em;
+  margin-bottom: 18px;
+}
+
+.about-next-page .page-header p {
+  color: #e5f4f5;
+  font-size: 14px;
+  line-height: 1.85;
+  max-width: 650px;
+}
+
+.about-next-page .breadcrumb-custom {
+  color: rgba(255,255,255,.72);
+  font-size: 11px;
+  margin-top: 25px;
+}
+
+.about-next-page .breadcrumb-custom a {
+  color: #f2b093;
+}
+
+.about-next-page .breadcrumb-custom span {
+  color: rgba(255,255,255,.55);
+}
+
+.about-next-page main {
+  background: #f7fbfb;
+}
+
+.about-next-page .section {
+  padding: 88px 0;
+}
+
+.about-next-page .section-light {
+  background: #eaf5f6;
+}
+
+.about-next-page .section-label {
+  color: #bd6846;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .15em;
+  margin-bottom: 13px;
+}
+
+.about-next-page .section-title {
+  margin-bottom: 42px;
+}
+
+.about-next-page .section-title h2,
+.about-next-page .about-content h2,
+.about-next-page .section > .container > .row > .col-lg-6 > h2 {
+  color: #164e68;
+  font: 400 clamp(30px,4vw,46px)/1.12 Georgia,serif;
+  letter-spacing: -.02em;
+}
+
+.about-next-page .section-title p,
+.about-next-page .about-content p,
+.about-next-page .section > .container > .row > .col-lg-6 > p {
+  color: #6d8994;
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+.about-next-page .about-image {
+  padding: 0 22px 22px 0;
+}
+
+.about-next-page .about-image::before {
+  background: #dff3f5;
+  content: "";
+  inset: 22px 0 0 22px;
+  position: absolute;
+  z-index: 0;
+}
+
+.about-next-page .about-image img {
+  border-radius: 0;
+  box-shadow: 0 20px 48px rgba(22,78,104,.15);
+  position: relative;
+  z-index: 1;
+}
+
+.about-next-page .about-badge {
+  background: #d9865f;
+  border-radius: 0;
+  bottom: 0;
+  box-shadow: 0 12px 30px rgba(108,57,39,.18);
+  right: 0;
+  z-index: 2;
+}
+
+.about-next-page .about-badge strong {
+  font: 400 24px Georgia,serif;
+}
+
+.about-next-page .about-badge span {
+  color: #fff4ed;
+  font-size: 10px;
+}
+
+.about-next-page .about-content {
+  padding-left: 12px;
+}
+
+.about-next-page .about-content h2 {
+  margin-bottom: 20px;
+}
+
+.about-next-page .about-content h2 span {
+  color: #bd6846;
+}
+
+.about-next-page .about-content strong {
+  color: #164e68;
+}
+
+.about-next-page .mission-box {
+  background: linear-gradient(135deg,#4da9c2,#286f88);
+  border: 1px solid rgba(255,255,255,.22);
+  border-radius: 0;
+  box-shadow: 0 16px 36px rgba(35,94,109,.1);
+  min-height: 100%;
+  padding: 38px;
+}
+
+.about-next-page .mission-box.dark {
+  background: linear-gradient(135deg,#164e68,#123f55);
+}
+
+.about-next-page .mission-box i {
+  color: #f2b093;
+  font-size: 32px;
+}
+
+.about-next-page .mission-box h3 {
+  font: 400 29px Georgia,serif;
+  margin-bottom: 15px;
+}
+
+.about-next-page .mission-box p {
+  color: #e5f4f5;
+  font-size: 12px;
+  line-height: 1.9;
+}
+
+.about-next-page .value-card {
+  background: #fff;
+  border: 1px solid #dcecef;
+  border-radius: 0;
+  box-shadow: 0 10px 26px rgba(35,94,109,.05);
+  padding: 30px 26px;
+  transition: border-color .25s ease, box-shadow .25s ease, transform .25s ease;
+}
+
+.about-next-page .value-card:hover {
+  border-color: #afd2da;
+  box-shadow: 0 18px 32px rgba(35,94,109,.12);
+  transform: translateY(-5px);
+}
+
+.about-next-page .value-icon {
+  background: #e4f3f5;
+  border-radius: 50%;
+  color: #164e68;
+  height: 54px;
+  width: 54px;
+}
+
+.about-next-page .value-card h3 {
+  color: #164e68;
+  font: 400 22px Georgia,serif;
+}
+
+.about-next-page .value-card p {
+  color: #6d8994;
+  font-size: 11px;
+  line-height: 1.85;
+}
+
+.about-next-page .domain-list li {
+  border-bottom-color: #d4e6e9;
+  color: #526f7b;
+  font-size: 12px;
+  padding: 14px 0;
+}
+
+.about-next-page .domain-list i {
+  color: #bd6846;
+}
+
+.about-next-page .member-card {
+  background: #fff;
+  border: 1px solid #dcecef;
+  border-radius: 0;
+  box-shadow: 0 12px 28px rgba(35,94,109,.07);
+  transition: box-shadow .25s ease, transform .25s ease;
+}
+
+.about-next-page .member-card:hover {
+  box-shadow: 0 18px 36px rgba(35,94,109,.13);
+  transform: translateY(-5px);
+}
+
+.about-next-page .member-card img {
+  background: #e4f3f5;
+  height: 340px;
+}
+
+.about-next-page .member-info {
+  padding: 24px;
+}
+
+.about-next-page .member-info h3 {
+  color: #164e68;
+  font: 400 21px/1.25 Georgia,serif;
+}
+
+.about-next-page .member-info span {
+  color: #bd6846;
+  font-size: 11px;
+}
+
+.about-next-page .cta {
+  background: linear-gradient(120deg,#164e68,#286f88);
+  padding: 82px 0;
+}
+
+.about-next-page .cta h2 {
+  color: #fff;
+  font: 400 clamp(34px,4.5vw,52px)/1.1 Georgia,serif;
+}
+
+.about-next-page .cta p {
+  color: #e5f4f5;
+  font-size: 12px;
+  max-width: 560px;
+}
+
+.about-next-page .btn-white {
+  background: #d9865f;
+  border-radius: 0;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 500;
+  padding: 14px 21px;
+  transition: background .2s ease, transform .2s ease;
+}
+
+.about-next-page .btn-white:hover {
+  background: #bd6846;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.about-next-page footer.orpais-site-footer {
+  background: #123f55;
+}
+
+@media (max-width: 991px) {
+  .about-next-page .navbar-collapse {
+    background: #fff;
+    border: 1px solid #dcecef;
+    border-radius: 0;
+    box-shadow: 0 16px 30px rgba(22,78,104,.1);
+    margin-top: 10px;
+    padding: 16px;
+  }
+
+  .about-next-page .about-content {
+    margin-top: 18px;
+    padding-left: 0;
+  }
+
+  .about-next-page .page-header {
+    padding: 140px 0 70px;
+  }
+}
+
+@media (max-width: 576px) {
+  .about-next-page main .row {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .about-next-page .page-header {
+    padding: 126px 0 58px;
+  }
+
+  .about-next-page .page-header h1 {
+    font-size: 42px;
+  }
+
+  .about-next-page .section {
+    padding: 65px 0;
+  }
+
+  .about-next-page .about-image {
+    margin: 0 8px 12px 0;
+  }
+
+  .about-next-page .about-badge {
+    bottom: 0;
+    padding: 15px 18px;
+  }
+
+  .about-next-page .mission-box {
+    padding: 28px;
+  }
+
+  .about-next-page .member-card img {
+    height: 300px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .about-next-page .value-card,
+  .about-next-page .member-card,
+  .about-next-page .btn-white {
+    transition: none !important;
+  }
+}
