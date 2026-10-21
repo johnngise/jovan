@@ -38,6 +38,7 @@ try {
             id,
             name,
             position,
+            biography,
             photo,
             status,
             display_order
@@ -75,6 +76,7 @@ $success = '';
 
 $name = $member['name'];
 $position = $member['position'];
+$biography = $member['biography'] ?? '';
 $status = $member['status'];
 $displayOrder = $member['display_order'];
 $currentPhoto = $member['photo'];
@@ -93,6 +95,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     */
     $name = trim($_POST['name'] ?? '');
     $position = trim($_POST['position'] ?? '');
+    $biography = trim($_POST['biography'] ?? '');
     $status = $_POST['status'] ?? 'active';
     $displayOrder = filter_input(
         INPUT_POST,
@@ -127,6 +130,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if ($error === '' && mb_strlen($position) > 200) {
 
         $error = 'La fonction ne peut pas dépasser 200 caractères.';
+
+    }
+
+    if ($error === '' && mb_strlen($biography) > 5000) {
+
+        $error = 'La biographie ne peut pas dépasser 5 000 caractères.';
 
     }
 
@@ -317,6 +326,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 SET
                     name = :name,
                     position = :position,
+                    biography = :biography,
                     photo = :photo,
                     status = :status,
                     display_order = :display_order
@@ -326,6 +336,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $stmt->execute([
                 ':name' => $name,
                 ':position' => $position,
+                ':biography' => $biography !== '' ? $biography : null,
                 ':photo' => $newPhotoPath,
                 ':status' => $status,
                 ':display_order' => $displayOrder,
@@ -389,6 +400,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
             $member['name'] = $name;
             $member['position'] = $position;
+            $member['biography'] = $biography;
             $member['photo'] = $newPhotoPath;
             $member['status'] = $status;
             $member['display_order'] = $displayOrder;
@@ -1148,6 +1160,32 @@ if (count($nameParts) >= 2) {
 
                     </div>
 
+                    <!-- BIOGRAPHIE -->
+
+                    <div class="mb-4">
+
+                        <label
+                            for="biography"
+                            class="form-label"
+                        >
+                            Biographie
+                        </label>
+
+                        <textarea
+                            class="form-control"
+                            id="biography"
+                            name="biography"
+                            rows="6"
+                            maxlength="5000"
+                            placeholder="Présentez le parcours, l'expérience et l'engagement du membre."
+                        ><?= e($biography) ?></textarea>
+
+                        <div class="help-text">
+                            Cette biographie sera affichée sur le profil public du membre. Maximum 5 000 caractères.
+                        </div>
+
+                    </div>
+
 
                     <div class="row g-3">
 
@@ -1569,7 +1607,6 @@ if (count($nameParts) >= 2) {
 
 </body>
 </html>
-
 
 
 

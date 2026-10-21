@@ -4,6 +4,7 @@ require_once __DIR__ . '/../auth.php';
 require_once __DIR__ . '/../../config/database.php';
 
 $error = '';
+$biography = '';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
@@ -21,6 +22,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if ($name === '' || $position === '') {
 
         $error = "Le nom et la fonction sont obligatoires.";
+
+    } elseif (mb_strlen($biography, 'UTF-8') > 5000) {
+
+        $error = "La biographie ne peut pas dépasser 5 000 caractères.";
 
     } else {
 
@@ -231,7 +236,8 @@ button {
 <input type="text" name="position" required>
 
 <label>Biographie</label>
-<textarea name="biography"></textarea>
+<textarea name="biography" maxlength="5000"><?= htmlspecialchars($biography, ENT_QUOTES, 'UTF-8') ?></textarea>
+<small>Cette biographie sera affichée sur le profil public du membre. Maximum 5 000 caractères.</small>
 
 <label>Photo</label>
 <input
@@ -275,5 +281,4 @@ button {
 
 </body>
 </html>
-
 

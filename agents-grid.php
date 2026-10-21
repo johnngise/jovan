@@ -309,6 +309,19 @@ try {
         line-height: 1.8;
         margin-bottom: 0;
     }
+    .team-biography-title {
+        color: var(--orpaics-dark);
+        font-size: 14px;
+        font-weight: 700;
+        margin: 18px 0 7px;
+    }
+    .team-biography-empty {
+        color: #6b7c8f;
+        font-size: 13px;
+        font-style: italic;
+        line-height: 1.7;
+        margin-bottom: 0;
+    }
     /* ==============================
        SOCIALS
     ============================== */
@@ -567,11 +580,16 @@ try {
                                     <?= e($member['position']) ?>
                                 </div>
                             <?php endif; ?>
+                            <h4 class="team-biography-title">Biographie</h4>
                             <?php if (strlen(trim((string) ($member['biography'] ?? ''))) >= 24): ?>
                                 <p class="team-biography">
                                     <?= nl2br(
                                         e($member['biography'])
                                     ) ?>
+                                </p>
+                            <?php else: ?>
+                                <p class="team-biography-empty">
+                                    Biographie en cours de rédaction.
                                 </p>
                             <?php endif; ?>
                             <!-- RESEAUX SOCIAUX -->
